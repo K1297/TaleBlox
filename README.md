@@ -70,7 +70,58 @@ The project should now be running on `http://localhost:3000`
 * To incentivize content creators, mint NFT tokens linked to their stories by selecting "Mint NFT." This process celebrates and rewards authors.
 * Immerse yourself in the TaleBlox community, share your stories, collect NFTs, and celebrate the fusion of storytelling and art. Your creative journey begins here.
 
-# Smart contract documentation 
+# Canister documentation 
+
+To deploy and interact with the TaleBlox canister, you'll need to follow these steps:
+
+1) Deploy the TaleBlox canister on your chosen Internet Computer environment.
+
+2) Interact with the canister using the provided Motoko functions to create, contribute to, and retrieve stories.
+
+## Types
+
+**Story**
+A Story is represented by the following fields:
+
+* **id:** A unique identifier for the story.
+* **title:** The title of the story.
+* **initialAuthor:** The author of the first page of the story.
+* **pageCount:** The total number of pages in the story.
+* **pages:** An array of Page objects representing the story's pages.
+* **owner:** The principal of the story's owner.
+
+**Page**
+A Page is represented by the following fields:
+
+* **id:** A unique identifier for the page.
+* **author:** The author of the page.
+* **prompt:** The prompt for the page.
+* **content:** The content of the page.
+* **image:** The URL of the associated image.
+
+**NFT**
+An NFT is used to represent the index of a story associated with an NFT.
+
+## Actor Class
+
+The TaleBlox actor class is the core component of the canister, responsible for managing stories and NFTs. It contains functions for creating stories, contributing to stories, and minting NFTs.
+
+## Functions
+
+* **createStory(id, title, prompt, content, imageUrl, metadataUrl)**
+This function allows users to create a new story with the specified parameters. It mints an NFT for the associated image and initializes the story.
+
+* **contributeToStory(storyId, prompt, content, imageUrl, metadataUrl)**
+Users can contribute to existing stories using this function. It also mints NFTs for associated images and adds a new page to the story.
+
+* **getAllStories()**
+This query function returns a list of all existing stories.
+
+## Minting NFTs
+Minting NFTs is done internally within the canister. The mintImageAsNFT private function is responsible for this process. It should take a metadata URL as input and return true if successful or false if there's an error.
+
+## Queries
+The canister supports a single query function, getAllStories, which allows users to retrieve a list of all available stories.
 
 # Troubleshooting 
 
@@ -91,6 +142,8 @@ To contribute, please follow the following steps:
 * Aigbe Destiny
 * Kushal Sapra
 * Chukwunonso Iwenor
+* Marvellous Aigbe
+* Sinachi Ajuzie
 
 # Acknowledgements
 

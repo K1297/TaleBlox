@@ -41,7 +41,7 @@ We bridges storytelling and art like never before. With AI-powered enhancements 
 First, you need to clone the repository
 
 ```
-git clone 
+https://github.com/Destiny-01/TaleBlox-ICP
 ```
 
 2. Install Dependencies
@@ -72,15 +72,10 @@ The project should now be running on `http://localhost:3000`
 
 # Canister documentation 
 
-To deploy and interact with the TaleBlox canister, you'll need to follow these steps:
-
-1) Deploy the TaleBlox canister on your chosen Internet Computer environment.
-
-2) Interact with the canister using the provided Motoko functions to create, contribute to, and retrieve stories.
-
 ## Types
 
 **Story**
+
 A Story is represented by the following fields:
 
 * **id:** A unique identifier for the story.
@@ -91,6 +86,7 @@ A Story is represented by the following fields:
 * **owner:** The principal of the story's owner.
 
 **Page**
+
 A Page is represented by the following fields:
 
 * **id:** A unique identifier for the page.
@@ -100,6 +96,7 @@ A Page is represented by the following fields:
 * **image:** The URL of the associated image.
 
 **NFT**
+
 An NFT is used to represent the index of a story associated with an NFT.
 
 ## Actor Class
@@ -125,13 +122,27 @@ The canister supports a single query function, getAllStories, which allows users
 
 # Troubleshooting 
 
+* **Check Internet Connection**
+
+Before attempting any troubleshooting steps, ensure that you have a stable and active internet connection. Internet Identity relies on a connection to the Internet to function correctly.
+
+* **Supported Browsers**
+
+Internet Identity is designed to work with modern web browsers. Make sure you are using a supported browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge. Ensure your browser is up-to-date.
+
+* **Clear Browser Cache**
+Cached data in your browser can sometimes cause issues. Try clearing your browser cache and cookies. Instructions for doing this vary depending on your browser, so consult your browser's documentation.
+
+* **Identity Provider Issues**
+Internet Identity relies on identity providers like DFINITY Foundation's Identity Provider (IDP). If the IDP experiences downtime or issues, it can affect your ability to log in. Check the status of the identity provider, if possible.
+
 # Contribution Guidelines
 
 We welcome contributions from anyone who would like to help improve our dapp.
 
 To contribute, please follow the following steps:
 
-1. Fork the repository to your own GitHub account: 
+1. Fork the repository to your own GitHub account: https://github.com/Destiny-01/TaleBlox-ICP
 2. Create a new branch from the main branch for your changes.
 3. Make your changes and commit them with clear commit messages.
 4. Push your changes to your forked repository.

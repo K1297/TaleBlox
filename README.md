@@ -131,9 +131,11 @@ Before attempting any troubleshooting steps, ensure that you have a stable and a
 Internet Identity is designed to work with modern web browsers. Make sure you are using a supported browser such as Google Chrome, Mozilla Firefox, or Microsoft Edge. Ensure your browser is up-to-date.
 
 * **Clear Browser Cache**
+
 Cached data in your browser can sometimes cause issues. Try clearing your browser cache and cookies. Instructions for doing this vary depending on your browser, so consult your browser's documentation.
 
 * **Identity Provider Issues**
+
 Internet Identity relies on identity providers like DFINITY Foundation's Identity Provider (IDP). If the IDP experiences downtime or issues, it can affect your ability to log in. Check the status of the identity provider, if possible.
 
 # Contribution Guidelines

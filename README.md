@@ -22,7 +22,7 @@ We bridges storytelling and art like never before. With AI-powered enhancements 
 
 # Architecture
 
-[Image](IMG-20230926-WA0009.jpg)
+![01_page-0001](IMG-20230926-WA0009.jpg)
 
 ## Components 
 

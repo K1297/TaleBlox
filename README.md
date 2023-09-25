@@ -34,7 +34,7 @@ We bridges storytelling and art like never before. With AI-powered enhancements 
 
 * **Canister:** The Canister of TaleBlox is built using Motoko. It handles user data, story creation, NFT minting, and author rewards. It acts as the bridge between the frontend and backend components, ensuring that user actions are processed securely and efficiently.
 
-* **ChatGPT:** ChatGPT plays a crucial role in ensuring the safety of user-generated prompts within TaleBlox. It performs HTTPS outcalls to check the prompts for safety, helping maintain a secure and respectful environment for all users.
+* **ChatGPT:** ChatGPT plays a crucial role in ensuring the safety of user-generated prompts within TaleBlox.
 
 * **Leonardo AI:** Leonardo AI is an integral component responsible for generating NFT art based on the stories created within TaleBlox. It utilizes advanced AI algorithms to transform textual narratives into visually stunning artworks, enhancing the storytelling experience.
 

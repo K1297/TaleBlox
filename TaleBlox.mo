@@ -1,29 +1,36 @@
 import Debug "mo:base/Debug";
-import Principal "mo:base/Principal";
 import Array "mo:base/Array";
-
-type Story = {
-  id : Text;
-  title : Text;
-  initialAuthor : Principal;
-  pageCount : Nat;
-  pages : [Page];
-  owner : Principal;
-};
-
-type Page = {
-  id : Nat;
-  author : Principal;
-  prompt : Text;
-  content : Text;
-  image : Text;
-};
-
-type NFT = {
-  storyIndex : Nat;
-};
+import Principal "mo:base/Principal";
 
 actor class TaleBlox() = this {
+  type Story = {
+    id : Text;
+    title : Text;
+    summary : Text;
+    characterDescription : Text;
+    characterBackground : Text;
+    imageModel : Text;
+    imageStyle : Text;
+    initialAuthor : Principal;
+    pageCount : Nat;
+    pages : [Page];
+    owner : Principal;
+  };
+
+  type Page = {
+    id : Nat;
+    title: Text;
+    author : Principal;
+    prompt : Text;
+    content : Text;
+    image : Text;
+  };
+
+  type NFT = {
+    storyIndex : Nat;
+  };
+
+  // let Author = Authors.Author;
   var stories : [Story] = [];
   var nfts : [NFT] = [];
 
@@ -41,7 +48,20 @@ actor class TaleBlox() = this {
     );
   };
 
-  public func createStory(id : Text, title : Text, prompt : Text, content : Text, imageUrl : Text, metadataUrl : Text) : async () {
+  public func createStory(
+    id : Text,
+    title : Text,
+    prompt : Text,
+    content : Text,
+    imageUrl : Text,
+    summary : Text,
+    characterDescription : Text,
+    characterBackground : Text,
+    imageModel : Text,
+    imageStyle : Text,
+    pageTitle: Text,
+    metadataUrl : Text,
+  ) : async () {
     let isImageMinted = await mintImageAsNFT(metadataUrl);
     if (isImageMinted) {
       let author = Principal.fromActor(this);
@@ -50,11 +70,17 @@ actor class TaleBlox() = this {
         title = title;
         initialAuthor = author;
         pageCount = 1;
+        summary = summary;
+        characterDescription = characterDescription;
+        characterBackground = characterBackground;
+        imageModel = imageModel;
+        imageStyle = imageStyle;
         pages = Array.tabulate<Page>(
           1,
           func(_ : Nat) : Page {
             {
               id = 1;
+              title = pageTitle;
               author = author;
               prompt = prompt;
               content = content;
@@ -80,9 +106,20 @@ actor class TaleBlox() = this {
     };
   };
 
-  public func contributeToStory(storyId : Text, prompt : Text, content : Text, imageUrl : Text, metadataUrl : Text) : async () {
+  public func contributeToStory(
+    storyId : Text,
+    prompt : Text,
+    summary : Text,
+    content : Text,
+    pageTitle: Text,
+    imageUrl : Text,
+    metadataUrl : Text,
+  ) : async () {
     let author = Principal.fromActor(this);
-    let existingStory = Array.find<Story>(stories, func(story : Story) : Bool { story.id == storyId });
+    let existingStory = Array.find<Story>(
+      stories,
+      func(story : Story) : Bool { story.id == storyId },
+    );
     switch (existingStory) {
       case null {
         Debug.print("Story not found.");
@@ -92,11 +129,12 @@ actor class TaleBlox() = this {
         let isImageMinted = await mintImageAsNFT(metadataUrl);
         if (isImageMinted) {
           let newPage : Page = {
-            id = Array.size(foundStory.pages);
+            id = Array.size(foundStory.pages) + 1;
             author = author;
             prompt = prompt;
             content = content;
             image = imageUrl;
+            title = pageTitle;
           };
           let updatedPages = Array.tabulate(
             Array.size(foundStory.pages) + 1,
@@ -111,10 +149,15 @@ actor class TaleBlox() = this {
           let updatedStory : Story = {
             id = foundStory.id;
             title = foundStory.title;
+            summary = summary;
             initialAuthor = foundStory.initialAuthor;
             pageCount = foundStory.pageCount + 1;
             pages = updatedPages;
             owner = foundStory.owner;
+            characterDescription = foundStory.characterDescription;
+            characterBackground = foundStory.characterBackground;
+            imageModel = foundStory.imageModel;
+            imageStyle = foundStory.imageStyle;
           };
           updateStory(storyId, updatedStory);
         } else {

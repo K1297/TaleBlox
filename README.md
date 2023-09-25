@@ -22,6 +22,10 @@ We bridges storytelling and art like never before. With AI-powered enhancements 
 
 # Architecture
 
+![My Remote Image](https://www.dropbox.com/scl/fi/pug0q7nxw5igups0k3d5f/1000002126.jpg?rlkey=matyd5qhdim1axzb2g9ezjtj5&dl=0)
+
+## Components 
+
 * **Browser:** The browser is the user's entry point into TaleBlox. Users access the Dapp through their web browser, where they can interact with the frontend interface, create stories, generate NFT art, and engage with the platform's features.
 
 * **Internet Identity:** Internet Identity serves as the secure authentication mechanism for TaleBlox. It ensures that users can sign in securely, protecting their data and interactions within the Dapp.

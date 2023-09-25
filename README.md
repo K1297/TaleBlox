@@ -18,7 +18,7 @@ We bridges storytelling and art like never before. With AI-powered enhancements 
 
 * **Author Rewards:** Incentivize writers by rewarding them with NFT tokens linked to their stories. This feature encourages content creation and community engagement.
 
-* **Prompt Safety Checks:** Your safety is our priority. TaleBlox includes robust prompt safety checks, leveraging ChatGPT 3.5, to ensure a secure and enjoyable experience for all users.
+* **Prompt Safety Checks:** Your safety is our priority. TaleBlox includes robust prompt safety checks, leveraging ChatGPT, to ensure a secure and enjoyable experience for all users.
 
 # Architecture
 
@@ -34,7 +34,7 @@ We bridges storytelling and art like never before. With AI-powered enhancements 
 
 * **Canister:** The Canister of TaleBlox is built using Motoko. It handles user data, story creation, NFT minting, and author rewards. It acts as the bridge between the frontend and backend components, ensuring that user actions are processed securely and efficiently.
 
-* **ChatGPT 3.5:** ChatGPT 3.5 plays a crucial role in ensuring the safety of user-generated prompts within TaleBlox. It performs HTTPS outcalls to check the prompts for safety, helping maintain a secure and respectful environment for all users.
+* **ChatGPT:** ChatGPT plays a crucial role in ensuring the safety of user-generated prompts within TaleBlox. It performs HTTPS outcalls to check the prompts for safety, helping maintain a secure and respectful environment for all users.
 
 * **Leonardo AI:** Leonardo AI is an integral component responsible for generating NFT art based on the stories created within TaleBlox. It utilizes advanced AI algorithms to transform textual narratives into visually stunning artworks, enhancing the storytelling experience.
 

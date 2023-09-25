@@ -22,7 +22,7 @@ We bridges storytelling and art like never before. With AI-powered enhancements 
 
 # Architecture
 
-![My Remote Image](https://www.dropbox.com/scl/fi/pug0q7nxw5igups0k3d5f/1000002126.jpg?rlkey=matyd5qhdim1axzb2g9ezjtj5&dl=0)
+
 
 ## Components 
 

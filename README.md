@@ -164,4 +164,4 @@ We would like to acknowledge the following individuals and resources for their c
 * **Internet Computer Protocol:** The foundation of TaleBlox relies on the Internet Computer Protocol (ICP), enabling the secure and decentralized nature of our Dapp.
 * **OpenAI:** Our sincere thanks to OpenAI for the incredible GPT-3.5 model that powers the prompt safety checks and story generation in TaleBlox.
 * **Leonardo AI:** We acknowledge Leonardo AI for its exceptional image generation capabilities, bringing our stories to life as stunning NFT art.
-* **Our Community:** Last but not least, we'd like to express our appreciation to our vibrant TaleBlox community. Your feedback and engagement drive the continued growth and improvement of our platform.
+* **Storychain** We'd like to express our gratitude to the creators of "Storychain" for their innovative contributions to the blockchain storytelling domain. Their work has inspired and informed our development efforts for TaleBlox.
